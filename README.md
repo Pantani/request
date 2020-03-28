@@ -9,14 +9,14 @@ import "github.com/Pantani/request"
 client := request.InitClient("http://127.0.0.1:8080")
 // OR
 client := request.Request{
-			HttpClient:   request.DefaultClient,
-			ErrorHandler: request.DefaultErrorHandler,
-			BaseUrl:      "http://127.0.0.1:8080",
-            Headers: map[string]string{
-                "Content-Type": "application/json",
-                "Accept":       "application/json",
-            },
-		}
+	HttpClient:   request.DefaultClient,
+	ErrorHandler: request.DefaultErrorHandler,
+	BaseUrl:      "http://127.0.0.1:8080",
+	Headers: map[string]string{
+		"Content-Type": "application/json",
+		"Accept":       "application/json",
+	},
+}
 ```
 ## Methods
 
@@ -45,17 +45,17 @@ err := request.PostWithCache(&result, "api/v1/object", Request{Name: "name", Id:
 - Add Error Handler:
 ```go
 client.ErrorHandler = func(res *http.Response, desc string) error {
-		switch res.StatusCode {
-		case http.StatusBadRequest:
-			return getAPIError(res, desc)
-		case http.StatusNotFound:
-			return blockatlas.ErrNotFound
-		case http.StatusOK:
-			return nil
-		default:
-			return errors.E("getHTTPError error", errors.Params{"status": res.Status})
-		}
+	switch res.StatusCode {
+	case http.StatusBadRequest:
+		return getAPIError(res, desc)
+	case http.StatusNotFound:
+		return blockatlas.ErrNotFound
+	case http.StatusOK:
+		return nil
+	default:
+		return errors.E("getHTTPError error", errors.Params{"status": res.Status})
 	}
+}
 ```
 
 - Set timeout:
