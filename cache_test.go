@@ -1,4 +1,4 @@
-package blockatlas
+package request
 
 import (
 	"net/url"

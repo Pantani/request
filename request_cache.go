@@ -1,4 +1,4 @@
-package blockatlas
+package request
 
 import (
 	"github.com/patrickmn/go-cache"
