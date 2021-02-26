@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/Pantani/request/branch/master/graph/badge.svg?token=BNDBT0HFFT)](https://codecov.io/gh/Pantani/request)
+
 # Client request abstraction
 
 Simple abstraction for client requests with memory cache.
