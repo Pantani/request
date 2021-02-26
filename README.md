@@ -1,3 +1,4 @@
+[![Go Reference](https://pkg.go.dev/badge/github.com/Pantani/request.svg)](https://pkg.go.dev/github.com/Pantani/request)
 [![codecov](https://codecov.io/gh/Pantani/request/branch/master/graph/badge.svg?token=BNDBT0HFFT)](https://codecov.io/gh/Pantani/request)
 
 # Client request abstraction
