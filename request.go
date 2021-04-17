@@ -204,6 +204,9 @@ func (r *Request) Execute(ctx context.Context, method string, url string, body i
 	if err != nil {
 		return errors.E(err, errParams)
 	}
+	if b == nil || len(b) == 0 {
+		return nil
+	}
 	err = json.Unmarshal(b, result)
 	if err != nil {
 		return errors.E(err, errParams)
